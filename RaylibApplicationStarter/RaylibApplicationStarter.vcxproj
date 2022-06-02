@@ -173,19 +173,25 @@
   <ItemGroup>
     <ClCompile Include="Application.cpp" />
     <ClCompile Include="Assets.cpp" />
+    <ClCompile Include="Blob.cpp" />
     <ClCompile Include="Config.cpp" />
+    <ClCompile Include="GameObjectManager.cpp" />
     <ClCompile Include="GameStateManager.cpp" />
     <ClCompile Include="IGameObject.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Player.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h" />
     <ClInclude Include="Assets.h" />
+    <ClInclude Include="Blob.h" />
     <ClInclude Include="Config.h" />
+    <ClInclude Include="GameObjectManager.h" />
     <ClInclude Include="GameStateManager.h" />
     <ClInclude Include="ICollider.h" />
     <ClInclude Include="IGameObject.h" />
     <ClInclude Include="IGameState.h" />
+    <ClInclude Include="Player.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

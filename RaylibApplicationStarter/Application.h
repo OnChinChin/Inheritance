@@ -2,6 +2,7 @@
 
 class GameStateManager;
 
+
 class Application
 {
 public:
@@ -19,5 +20,6 @@ private:
 	void OnDestroy();
 
 	GameStateManager* m_gameStateManager;
+
 
 };

@@ -3,15 +3,21 @@
 #include <raylib.h>
 
 #include "GameStateManager.h"
+#include"GameObjectManager.h"
 
 #include "Assets.h"
 #include "Config.h"
+
+#include"Player.h"
 
 Application::Application()
 {
 	m_gameStateManager = new GameStateManager();
 	windowWidth = config.GetIntValue(PROGRAM_CATEGORY, "width");
 	windowHeight = config.GetIntValue(PROGRAM_CATEGORY, "height");
+
+	gameObjectManager.AddObject(new Player);
+
 }
 
 void Application::Run()
@@ -45,11 +51,13 @@ void Application::Start()
 void Application::Update(float _dt)
 {
 	m_gameStateManager->Update(_dt);
+	gameObjectManager.Update(_dt);
 }
 
 void Application::Draw()
 {
 	m_gameStateManager->Draw();
+	gameObjectManager.Draw();
 }
 
 void Application::OnDestroy()
